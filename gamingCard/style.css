@@ -6,20 +6,35 @@
 body {
   background-color: #fff;
 }
-.image {
-  height: 100%;
-  width: 100%;
-}
-.cards {
-  display: grid;
-  height: 100%;
-  width: 500px;
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.container {
+  height: 100%;
+  width: 100%;
+}
+.image {
+  height: 187px;
+  width: 187px;
+  position: relative;
+  top: -40px;
+  /* border-radius: 50%; */
+}
+.coins_image {
+  height: 40px;
+  width: 40px;
+}
+.cards {
+  display: grid;
+  height: 60vh;
+  width: 100%;
+}
 .card {
-  height: 200px;
-  width: 150px;
-  border: 1px solid #ccc;
+  height: 260px;
+  width: 210px;
+  border: 2px solid #ccc;
+  flex-direction: column;
+  display: flex;
 }
