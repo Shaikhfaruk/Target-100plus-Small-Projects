@@ -79,3 +79,17 @@ body {
   grid-column-start: 1;
   grid-column-end: 2;
 }
+.item-5 {
+  /* grid-area lekar kar ske hai 😂 */
+  /* grid-area: 2/1/3/4; */
+
+  /* using span we can do it 😁 */
+  /* grid-row: 2/3;
+  grid-column: 1 / span 3; */
+
+  grid-column: 1/ -1;
+}
+.item-6 {
+  grid-row: 3 / -1;
+  grid-column: 1 / -1;
+}

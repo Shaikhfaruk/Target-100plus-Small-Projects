@@ -1,0 +1,25 @@
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 40px;
+  border: 2px solid #2dffd2;
+  outline: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  transition: 0.5s ease;
+  border-radius: 50%;
+}
+input[type="checkbox"]:not(:checked) {
+  border-color: #3399ff;
+}
+input[type="checkbox"]::before {
+  transform: translateX(60px);
+  background: #3399ff;
+}
