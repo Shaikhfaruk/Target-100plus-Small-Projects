@@ -1,29 +1,53 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+ul li label {
+  padding-left: 20px;
+}
 ul {
   list-style: none;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 ul li {
   height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
 }
 .touch {
   position: relative;
   width: 25px;
   height: 25px;
-  top: 2px;
-  left: -3px;
+  top: 24px;
+  left: -6px;
   border: 5px solid rgb(0, 171, 194);
   border-radius: 50%;
   display: none;
 }
+
 label:before {
   content: "";
   width: 15px;
   height: 15px;
   position: absolute;
   background: rgb(184, 16, 16);
-  left: 7px;
-  top: calc(50% - 13px);
+  left: 4px;
+  top: calc(50% - 6px);
+  z-index: -1;
   box-sizing: border-box;
   border-radius: 50%;
+}
+input {
+  opacity: 0;
 }
 input[type="radio"]:checked ~ .touch {
   position: absolute;
