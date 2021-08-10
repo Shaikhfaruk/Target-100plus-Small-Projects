@@ -1,0 +1,518 @@
+$black: #252021;
+$light: #d8dbe2;
+$pale: #b7cee8;
+$navy: #577399;
+$dark: #495867;
+$white: #ffffff;
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,400|PT+Mono&display=swap");
+
+$font: "Raleway", sans-serif;
+$mono: "PT Mono", monospace;
+$ease: all 0.3s ease;
+
+body {
+  margin: 0;
+  font-family: $font;
+}
+
+.color-box {
+  position: absolute;
+  display: flex;
+  width: 250px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  margin: 8px;
+}
+
+#dashboard-container {
+  position: relative;
+  margin: 5% auto;
+  width: 750px;
+  height: 550px;
+  border: 1px solid $light;
+}
+
+.leftside-menu {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background: $light;
+  box-shadow: 2px 2px 15px rgba($dark, 0.3);
+  text-align: center;
+}
+.avatar {
+  margin-top: 55%;
+  margin-bottom: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    color: $dark;
+    font-size: 0.8em;
+    margin-top: 15px;
+  }
+}
+.icon {
+  width: 55px;
+  height: 55px;
+  background: $pale;
+  border-radius: 50%;
+  p {
+    color: $white;
+    font-size: 1.7em;
+    margin: 0;
+    margin-top: 12px;
+  }
+}
+
+li {
+  list-style-type: none;
+  color: $dark;
+  margin: 0;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  cursor: pointer;
+  &:hover {
+    background: $white;
+    color: $navy;
+    transition: $ease;
+  }
+}
+
+.active {
+  background: $pale;
+  color: $white;
+  width: 140px;
+  margin-left: -10px;
+  box-shadow: 1px 1px 3px rgba($dark, 0.3);
+  transition: $ease;
+  &:hover {
+    background: $white;
+    color: $dark;
+    transition: $ease;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.15em;
+  color: $white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+p {
+  color: $navy;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+}
+
+a {
+  cursor: pointer;
+  padding: 3px;
+  &:hover {
+    background: $pale;
+    color: $white;
+    transition: $ease;
+  }
+}
+
+.time {
+  font-size: 1.8em;
+  font-family: $mono;
+  margin-top: -30px;
+  margin-bottom: 25px;
+  color: $pale;
+  background: $white;
+  padding: 7px;
+}
+
+.main-grid {
+  margin-top: 3.5%;
+  width: 70%;
+  margin-left: 25%;
+  background: $white;
+  height: 90%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "one four"
+    "one five"
+    "two five"
+    "two five"
+    "three six"
+    "three six"
+    "three six";
+}
+
+.item {
+  border: 1px solid $light;
+}
+//time
+.one {
+  grid-area: one;
+  grid-column: 1 / 2;
+  background: $pale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin-bottom: -40px;
+  }
+}
+//music player
+.two {
+  grid-area: two;
+  grid-column: 1;
+}
+
+.music {
+  color: $pale;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.info {
+  height: 5px;
+  width: 100%;
+  margin-bottom: -40px;
+  background: rgba($white, 0.85);
+  transform: translateY(35px);
+  transition: all 0.5s ease-in-out;
+}
+
+.progress-bar {
+  height: 5px;
+  width: 70%;
+  margin: 6% auto;
+  background: lighten($light, 5%);
+  border-radius: 10px;
+  font-family: $font;
+}
+
+.fill {
+  background-color: $pale;
+  width: 40%;
+  height: 0.3rem;
+  border-radius: 2px;
+}
+
+.time--current,
+.time--total {
+  color: $dark;
+  font-size: 10px;
+  position: absolute;
+  margin-top: -4px;
+}
+
+.time--current {
+  left: 15px;
+}
+
+.time--total {
+  right: 15px;
+}
+
+.currently-playing {
+  text-align: center;
+  margin-top: -3px;
+}
+
+.song-name,
+.artist-name {
+  font-family: $font;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.song-name {
+  font-size: 0.8em;
+  letter-spacing: 3px;
+  color: $dark;
+}
+
+.artist-name {
+  font-size: 0.6em;
+  letter-spacing: 1.5px;
+  color: lighten($dark, 15%);
+  margin-top: 5px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  justify-content: center;
+  color: $pale;
+  cursor: pointer;
+  .play {
+    margin: 15px 20px;
+    color: darken($pale, 10%);
+  }
+  .option {
+    left: 10px;
+    position: absolute;
+    font-size: 0.8em;
+  }
+  .add {
+    right: 10px;
+    position: absolute;
+    font-size: 0.8em;
+  }
+  .volume {
+    margin-right: 30px;
+    font-size: 0.8em;
+  }
+  .shuffle {
+    margin-left: 30px;
+    font-size: 0.8em;
+  }
+}
+
+.play,
+.next,
+.previous,
+.option,
+.add,
+.volume,
+.shuffle {
+  transition: all 0.5s ease;
+  &:hover {
+    color: lighten($dark, 15%);
+  }
+}
+
+//weather
+
+.three {
+  grid-area: three;
+  grid-column: 1;
+  background: $light;
+}
+
+h2 {
+  color: $white;
+  font-size: 2.3em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  i {
+    font-size: 0.7em;
+    margin-left: -10px;
+  }
+}
+.weather {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -70px;
+  p {
+    font-size: 0.7em;
+  }
+}
+.city {
+  color: $dark;
+}
+
+//calendar
+.four {
+  grid-area: four;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  p {
+    margin-top: 8px;
+  }
+}
+#date {
+  color: $pale;
+  font-family: $mono;
+  font-size: 1.3em;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+//rooms
+.five {
+  grid-area: five;
+  grid-column: 2;
+}
+.rooms--top {
+  margin: 20px;
+}
+.rooms {
+  margin-bottom: -55px;
+}
+.rooms--btns {
+  margin-top: 30px;
+}
+
+/*toggle button*/
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 13px;
+}
+.toggle-switch {
+  display: inline-block;
+  background: $light;
+  border-radius: 16px;
+  margin-left: 20px;
+  width: 40px;
+  height: 21px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  &:before,
+  &:after {
+    content: "";
+  }
+  &:before {
+    display: block;
+    background: linear-gradient(to bottom, $white 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.25s;
+  }
+  .toggle:hover &:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+  .toggle-checkbox:checked + & {
+    background: $pale;
+    &:before {
+      left: 20px;
+    }
+  }
+}
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.toggle-label {
+  font-size: 0.8em;
+  margin-left: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  top: 2px;
+}
+
+.six {
+  grid-area: six;
+  grid-column: 2;
+  background: $pale;
+}
+
+.reminders {
+  display: flex;
+  position: relative;
+  p {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+.reminder--btns {
+  position: absolute;
+  right: 18px;
+  top: 17px;
+  i {
+    color: $white;
+    cursor: pointer;
+    &:hover {
+      color: $navy;
+      transition: $ease;
+    }
+  }
+}
+.reminders--list {
+  margin-top: 15px;
+  margin-bottom: -60px;
+}
+
+.todo {
+  cursor: pointer;
+  display: inline-block;
+}
+.todo-switch {
+  display: inline-block;
+  background: $white;
+  border-radius: 50%;
+  margin-left: 20px;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  &:before,
+  &:after {
+    content: "";
+    color: $white;
+  }
+  .todo-checkbox:checked + & {
+    background: $navy;
+    &:before {
+      content: "\2713";
+      color: $white;
+      font-size: 1.3em;
+      transition: $ease;
+      position: absolute;
+      top: -10px;
+      left: 1px;
+    }
+  }
+}
+.todo-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.todo-label {
+  font-size: 0.8em;
+  margin-left: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  color: $white;
+  text-transform: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 10px;
+  p {
+    text-transform: uppercase;
+    color: $navy;
+    font-family: $font;
+    letter-spacing: 3px;
+  }
+  a {
+    font-family: $font;
+    text-transform: uppercase;
+    color: $dark;
+    text-decoration: none;
+    &:hover {
+      color: $pale;
+      background: $white;
+    }
+  }
+}

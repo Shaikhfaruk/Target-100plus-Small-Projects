@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="search-wrapper">
+      <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Type to search" />
+        <button class="search-icon" onclick="searchToggle();">
+          <span></span>
+        </button>
+      </div>
+      <span class="close" onclick="searchToggle();"></span>
+    </div>
+    <!-- <script src="./app.js"></script> -->
+    <script>
+      function searchToggle(obj, evt) {
+        var container = $(obj).closest(".search-wrapper");
+        if (!container.hasClass("active")) {
+          container.addClass("active");
+          evt.preventDefault();
+        } else if (
+          container.hasClass("active") &&
+          $(obj).closest(".input-holder").length == 0
+        ) {
+          container.removeClass("active");
+          // clear input
+          container.find(".search-input").val("");
+        }
+      }
+    </script>
+  </body>
+</html>
