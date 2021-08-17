@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+section button {
+  position: relative;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 450px;
+  height: 300px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1),
+    0 0 0 1000px rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  visibility: hidden;
+}
+.popup.active {
+  visibility: visible;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  background: #00ff62;
+  color: #fff;
+  cursor: pointer;
+}
+.close:hover {
+  background: #ff0000;
+}
+#my-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  visibility: hidden;
+  pointer-events: none;
+}
+#my-canvas.active {
+  visibility: visible;
+}
