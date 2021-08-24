@@ -108,7 +108,7 @@ h1 {
 .block-cube .text {
   position: relative;
   z-index: 2;
-  top: -9px;
+  top: -10px;
   display: grid;
   place-items: center;
 }
