@@ -36,7 +36,7 @@ h1 {
 .form .btn {
   width: 100%;
   display: block;
-  padding: 14px 16px;
+  padding: 5px 16px;
   background: transparent;
   outline: none;
   border: 0;
@@ -108,6 +108,9 @@ h1 {
 .block-cube .text {
   position: relative;
   z-index: 2;
+  top: -9px;
+  display: grid;
+  place-items: center;
 }
 .block-input input {
   position: relative;
