@@ -30,7 +30,7 @@ const animate = () => {
       borderRadius: `${50 + mouse.y * 50}% 0 ${50 + mouse.x * 50}% 50%`,
     };
     Object.assign(b.style, style);
-    b.style.setProperty("--color", `hsl(${Math.floor(color)}, 60%, 50%)`);
+    b.style.setProperty("--color", `hsl(${Math.floor(color)}, 100%, 66%)`);
   });
   requestAnimationFrame(animate);
 };
