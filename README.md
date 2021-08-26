@@ -1,7 +1,1 @@
-# Materials
-
-# I'm creating materials for your next projects.
-
-# All small projects
-
-# My target is 100 small projects, i'll be add in this repo
+# My Target is 100+ small projects I'll add to this Repository.✌
