@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.input-box {
+  position: relative;
+  height: 50px;
+  width: 270px;
+  border-radius: 6px;
+  background-color: white;
+}
+.input-box input {
+  padding-left: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #a4a4a4;
+  font-size: 16px;
+}
+.input-box .input-label {
+  position: absolute;
+  padding: 0 2px;
+  top: 50%;
+  left: 10px;
+  background-color: white;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  user-select: none;
+  font-size: 14px;
+}
+.input-box p {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #808080;
+}
+.input-box input:focus + .input-label,
+.input-box input:valid + .input-label {
+  top: 0;
+  color: #3f40f0;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border: 2px solid #3f40f0;
+  font-weight: 700;
+}
+.input-box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 18px;
+  color: #a4a4a4;
+  cursor: pointer;
+}
+.strength {
+  margin-left: 10px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 6px;
+  outline: none;
+  background-color: white;
+  border: 1px solid #c8c8c8;
+  transition: 0.5s;
+}
+.strength h4 {
+  font-size: 14px;
+}
+.strength p {
+  color: #808080;
+  font-size: 14px;
+}
+.progress-bar {
+  position: relative;
+  margin: 5px 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 6px;
+  background-color: #c8c8c8;
+}
+.progress {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 6px;
+}
