@@ -2,4 +2,4 @@
 
 # 23 Projects are Successfully Updated.
 
-# Date 26 August 2021 Today's Projects is: Show & Hide Password With Password Strength
+Date 26 August 2021 Today's Projects is: Show & Hide Password With Password Strength
