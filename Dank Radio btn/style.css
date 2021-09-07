@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  gap: 2rem;
+}
+label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+input {
+  position: absolute;
+  transform: scale(0);
+}
+.radio-button {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}

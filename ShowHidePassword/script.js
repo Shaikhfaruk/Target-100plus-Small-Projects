@@ -14,7 +14,7 @@ toggle = () => {
 };
 lock.addEventListener("click", toggle);
 
-// progress bar
+// progress bar start
 
 function check_pass() {
   let progress = document.querySelector(".progress");
@@ -24,10 +24,12 @@ function check_pass() {
 
   document.querySelector(".strength").style.display = "block";
 
-  var no = 0;
+  let no = 0;
   if (strPassword !== "") {
   }
-  if (strPassword.length <= 6) no = 1;
+  if (strPassword.length <= 6) {
+    no = 1;
+  }
   if (
     strPassword.length > 6 &&
     (strPassword.match(/[a-z]/) ||

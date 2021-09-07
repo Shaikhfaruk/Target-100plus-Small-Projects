@@ -1,0 +1,65 @@
+body {
+  background-color: #e2f3ff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  background-color: #838383;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+label {
+  width: 100%;
+  margin: 5px;
+}
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  padding: 0;
+  border-radius: 2rem;
+}
+input {
+  position: absolute;
+  transform: scale(0);
+}
+.btn-icon {
+  font-size: 1.5rem;
+  transition: all 0.35s;
+}
+.btn-icon:hover {
+  cursor: pointer;
+}
+.btn-text {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translate(1.25rem, -50%);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0.875rem;
+  color: #fff;
+  transition: all 0.35s;
+}
+input:checked ~ .btn {
+  background: #7ad1e0;
+  height: 5vh;
+}
+input:checked ~ .btn .btn-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-50%) translateX(4.5rem);
+}
+input:checked ~ .btn .btn-icon {
+  transform: translateX(1.5rem);
+}
