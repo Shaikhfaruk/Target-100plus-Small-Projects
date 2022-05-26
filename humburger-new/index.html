@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .side-bar {
+            height: 40px;
+            width: 40px;
+            position: relative;
+            border-radius: 15px;
+        }
+
+        .side-bar .bar-span {
+            height: 5px;
+            width: 40px;
+            display: block;
+            background-color: red;
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .side-bar:hover {
+            cursor: pointer;
+        }
+
+        .side-bar .bar-span:nth-child(1) {
+            top: 5px;
+        }
+
+        .side-bar .bar-span:nth-child(2) {
+            top: 17px;
+        }
+
+        .side-bar .bar-span:nth-child(3) {
+            top: 30px;
+        }
+
+        .side-bar.open .bar-span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 17px;
+            left: 0px;
+        }
+
+        .side-bar.open .bar-span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+        }
+
+        .side-bar.open .bar-span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 17px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="side-bar" onClick="open()">
+        <span class="bar-span"></span>
+        <span class="bar-span"></span>
+        <span class="bar-span"></span>
+    </div>
+    <script>
+        let open = () => {
+            document.querySelector(".side-bar").classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>

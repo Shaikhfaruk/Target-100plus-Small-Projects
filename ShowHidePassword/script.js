@@ -77,13 +77,12 @@ function check_pass() {
     strength.innerHTML = "Strong Password";
     strengthDetails.innerHTML =
       "Your Password is Strong, Just don't forget him";
+    //   } else {
+    //     progress.style.width = "0%";
+    //     progress.style.backgroundColor = "trasparent";
+    //     strength.innerHTML = "Password Strength";
+    // strengthDetails.innerHTML = "";
   }
-  //    else {
-  //     progress.style.width = "0%";
-  //     progress.style.backgroundColor = "trasparent";
-  //     strength.innerHTML = "Password Strength";
-  //     strengthDetails.innerHTML = "";
-  //   }
   {
   }
   {

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password match HTML5 Validation | Coderider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="login">
+      <div class="login_title">
+        <span>Enter your password</span>
+      </div>
+      <div class="login_fields">
+        <form action="">
+          <div class="login_fields__user">
+            <div class="icon">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png"
+              />
+            </div>
+            <input placeholder="Password" type="text" id="password" required />
+          </div>
+          <div class="login_fields__password">
+            <div class="icon">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png"
+              />
+            </div>
+            <input
+              placeholder="Confirm password"
+              type="password"
+              id="confirm_password"
+              required
+            />
+            <div class="validation">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png"
+              />
+            </div>
+          </div>
+          <div class="login_fields__submit">
+            <input type="submit" value="Confirm" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script>
+      var password = document.getElementById("password"),
+        confirm_password = document.getElementById("confirm_password"),
+        tick = document.querySelector(".validation");
+      console.log(tick);
+      function validatePassword() {
+        if (password.value != confirm_password.value) {
+          confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+          confirm_password.setCustomValidity("");
+          tick.style.opacity = `1`;
+        }
+      }
+      password.onchange = validatePassword;
+      confirm_password.onkeyup = validatePassword;
+    </script>
+  </body>
+</html>
