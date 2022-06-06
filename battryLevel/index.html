@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="battry-title"></title>
+</head>
+
+<body>
+    <h1 class="battry">10</h1>
+    <script>
+        let battryLevel = document.querySelector('.battry');
+        let batteryTitle = document.querySelector('.battry-title');
+        navigator.getBattery().then(function (battery) {
+            let level = battery.level
+            let status = level * 100 + '%';
+            battryLevel.innerHTML = status;
+            batteryTitle.innerHTML = 'Battery Level: ' + status;
+        });
+    </script>
+</body>
+
+</html>
