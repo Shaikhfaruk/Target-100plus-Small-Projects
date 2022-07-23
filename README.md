@@ -2,6 +2,15 @@
 
 Date 26 August 2021 Today's Projects is: Show & Hide Password With Password Strength
 
-IF You want see output of each folder then add file and folder path last of the deployed link.. 
+# date 23 july 2022
+
+## total projects: 38
+
+[]: # Language: markdown
+[]: # Path: README.md
+
+IF You want see output of each folder then add file and folder path last of the deployed link..
+
 ## Example : deployed link link https://materials-plum.vercel.app
+
 ## Do like this https://materials-plum.vercel.app/Bar/index.html
