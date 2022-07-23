@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  background: #333;
+}
+
+.container,
+.menu {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  margin: auto;
+  top: 20px;
+  bottom: 0;
+  left: 25px;
+  right: 0;
+  cursor: pointer;
+}
+
+.menu {
+  z-index: -1;
+  transform: scale(0.9);
+}
+
+.toggle {
+  position: absolute;
+  height: 0;
+  width: 40px;
+  border-bottom: 30px solid #ff9900;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  top: 0;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 40px;
+  border-top: 30px solid #ff9900;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  top: 30px;
+  left: -15px;
+}
+
+.item {
+  height: 0;
+  width: 40px;
+  border-bottom: 30px solid #ff9900;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  top: 0;
+  position: absolute;
+  transition: 1s;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 40px;
+  border-top: 30px solid #fff;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  top: 29px;
+  left: -15px;
+}
+
+#add {
+  font-size: 2rem;
+  color: #fff;
+  position: relative;
+  top: 12px;
+  left: 5px;
+  transition: 1s;
+}
+a > i {
+  color: #d2d2d2;
+  font-size: 2rem;
+}
+a {
+  position: relative;
+  top: 20px;
+  left: 9px;
+}
+i:hover {
+  color: #ffc061;
+  transform: scale(1.3);
+  transition: 0.5s;
+}
