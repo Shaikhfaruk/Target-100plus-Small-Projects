@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital@0;1&family=Ingrid+Darling&family=Mukta:wght@200&family=PT+Sans&family=PT+Serif&family=Ubuntu+Condensed&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  position: relative;
+  width: 170px;
+  height: 80px;
+  background-color: #080e2b;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+nav:before {
+  content: "Menu";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 80px;
+  background-color: #080e2b;
+  color: #a9b5ef;
+  font-size: 30px;
+  font-weight: 800;
+  z-index: 11;
+  transition: all 0.3s;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  line-height: 80px;
+}
+
+ul li a {
+  color: #a9b5ef;
+  font-size: 24px;
+  text-decoration: none;
+  margin: 0 -50px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+li a.active,
+li a:hover {
+  background-color: #0f1d63;
+}
+
+nav._expand {
+  width: 730px;
+}
+
+nav._expand::before {
+  opacity: 0;
+  pointer-events: none;
+}
+
+nav._expand ul li a {
+  margin: 0 10px;
+  padding: 10px 15px;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s;
+}

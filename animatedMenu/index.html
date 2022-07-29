@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar</title>
+
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li id="item-2"><a class="active" href="#">Home</a></li>
+            <li id="item-1"><a href="#">Service</a></li>
+            <li id="item-3"><a href="#">Contact</a></li>
+            <li id="item-4"><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <script>
+
+        let nav = document.querySelector(".navbar");
+        nav.addEventListener("click", function () {
+            this.classList.toggle("_expand");
+        });
+
+    </script>
+</body>
+
+</html>
